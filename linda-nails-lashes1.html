@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linda Nails &amp; Lashes — Studio paznokci i rzęs, Warszawa Ursynów</title>
+<meta name="description" content="Linda Nails & Lashes — manicure hybrydowy, przedłużanie paznokci, rzęsy i laminacja brwi na Ursynowie w Warszawie. 4,8/5 z 831 opinii. Umów wizytę online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#28191d;
+    --ink-soft:#5c4750;
+    --cream:#fbf5ef;
+    --cream-deep:#f3e8dd;
+    --wine:#7c2d40;
+    --wine-dark:#5a1e2e;
+    --blush:#f1d9d2;
+    --gold:#b6874c;
+    --gold-light:#e4c592;
+    --line:rgba(40,25,29,0.12);
+    --radius-lg:28px;
+    --radius-sm:14px;
+    --shadow:0 30px 60px -30px rgba(90,30,46,0.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Manrope",sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:"Fraunces",serif;
+    font-weight:450;
+    margin:0;
+    color:var(--ink);
+    line-height:1.05;
+  }
+  p{margin:0;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  section{padding:110px 0;}
+  @media(max-width:760px){section{padding:72px 0;}}
+
+  /* -------- focus & motion -------- */
+  a:focus-visible,button:focus-visible{outline:2px solid var(--wine);outline-offset:3px;}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+
+  /* -------- buttons -------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 30px;
+    border-radius:100px;
+    font-weight:600;
+    font-size:15px;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--wine);color:#fff;box-shadow:0 14px 30px -12px rgba(124,45,64,.65);}
+  .btn-primary:hover{background:var(--wine-dark);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--ink);}
+  .btn-light{background:#fff;color:var(--wine);}
+  .btn-light:hover{background:var(--cream-deep);transform:translateY(-2px);}
+
+  /* -------- header -------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,245,239,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Fraunces",serif;font-size:21px;font-weight:600;color:var(--wine);}
+  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);}
+  nav.links{display:flex;gap:34px;align-items:center;}
+  nav.links a{font-size:14.5px;font-weight:600;color:var(--ink-soft);transition:color .2s;}
+  nav.links a:hover{color:var(--wine);}
+  .nav-cta{display:flex;align-items:center;gap:14px;}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;}
+  @media(max-width:920px){
+    nav.links{display:none;}
+    .burger{display:block;}
+  }
+
+  /* -------- hero -------- */
+  .hero{padding:70px 0 90px;overflow:hidden;}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr 0.95fr;gap:60px;align-items:center;}
+  @media(max-width:920px){.hero .wrap{grid-template-columns:1fr;gap:44px;}.hero{padding:44px 0 60px;}}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--wine);font-weight:600;margin-bottom:22px;}
+  .eyebrow svg{width:16px;height:16px;}
+  .hero h1{font-size:clamp(38px,5.4vw,64px);letter-spacing:-.5px;}
+  .hero h1 em{font-style:italic;color:var(--wine);}
+  .hero-sub{margin-top:22px;font-size:17.5px;line-height:1.6;color:var(--ink-soft);max-width:480px;}
+  .hero-cta{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .rating-pill{
+    display:flex;align-items:center;gap:10px;margin-top:38px;
+    padding:12px 18px;background:#fff;border-radius:100px;box-shadow:var(--shadow);width:fit-content;
+  }
+  .rating-pill strong{font-family:"Fraunces",serif;font-size:19px;}
+  .stars{color:var(--gold);font-size:15px;letter-spacing:1px;}
+  .rating-pill span.small{font-size:13px;color:var(--ink-soft);}
+
+  .hero-art{position:relative;height:520px;}
+  .hero-art img{position:absolute;object-fit:cover;border-radius:22px;box-shadow:var(--shadow);}
+  .hero-art .img1{width:64%;height:78%;top:0;right:0;}
+  .hero-art .img2{width:46%;height:46%;bottom:0;left:0;border:6px solid var(--cream);}
+  .hero-art .badge{
+    position:absolute;left:8%;top:14%;background:#fff;padding:14px 18px;border-radius:16px;
+    box-shadow:var(--shadow);font-family:"Fraunces",serif;font-size:14px;display:flex;align-items:center;gap:10px;
+  }
+  .hero-art .badge .b-dot{width:10px;height:10px;border-radius:50%;background:#3fae60;}
+  @media(max-width:920px){.hero-art{height:380px;}}
+  @media(max-width:520px){.hero-art{height:300px;}.hero-art .badge{left:4%;top:6%;font-size:12px;padding:10px 14px;}}
+
+  /* -------- marquee amenities -------- */
+  .amenities{background:var(--wine);color:#fff;padding:20px 0;overflow:hidden;}
+  .amenities .track{display:flex;gap:52px;white-space:nowrap;animation:scroll 28s linear infinite;width:max-content;}
+  .amenities .track span{font-size:14px;font-weight:600;letter-spacing:.2px;display:flex;align-items:center;gap:10px;opacity:.92;}
+  .amenities .track span::before{content:"✦";color:var(--gold-light);}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* -------- section heading -------- */
+  .s-head{max-width:620px;margin-bottom:56px;}
+  .s-head .tag{color:var(--wine);font-weight:700;font-size:14px;margin-bottom:14px;display:block;}
+  .s-head h2{font-size:clamp(30px,3.6vw,44px);}
+  .s-head p{margin-top:16px;color:var(--ink-soft);font-size:16.5px;line-height:1.6;}
+  .center{text-align:center;margin-left:auto;margin-right:auto;}
+
+  /* -------- about -------- */
+  .about .wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;}
+  @media(max-width:900px){.about .wrap{grid-template-columns:1fr;gap:40px;}}
+  .about-photo{position:relative;}
+  .about-photo img{border-radius:var(--radius-lg);width:100%;height:460px;object-fit:cover;box-shadow:var(--shadow);}
+  .about-stats{position:absolute;bottom:-28px;right:-24px;background:#fff;border-radius:var(--radius-sm);padding:20px 26px;box-shadow:var(--shadow);}
+  @media(max-width:500px){.about-stats{position:static;margin-top:18px;}}
+  .about-stats .num{font-family:"Fraunces",serif;font-size:30px;color:var(--wine);}
+  .about-stats .lab{font-size:12.5px;color:var(--ink-soft);}
+  .about-text p{color:var(--ink-soft);font-size:16.5px;line-height:1.75;margin-bottom:18px;}
+  .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .pill{border:1px solid var(--line);border-radius:100px;padding:9px 16px;font-size:13.5px;font-weight:600;color:var(--ink-soft);display:flex;align-items:center;gap:8px;}
+  .pill svg{width:15px;height:15px;color:var(--wine);}
+
+  /* -------- services -------- */
+  .services{background:var(--cream-deep);}
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:44px;}
+  .tab-btn{
+    padding:11px 22px;border-radius:100px;border:1px solid var(--line);background:#fff;
+    font-weight:600;font-size:14.5px;cursor:pointer;color:var(--ink-soft);transition:all .2s;
+  }
+  .tab-btn.active{background:var(--wine);color:#fff;border-color:var(--wine);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;}
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+  @media(max-width:760px){.svc-grid{grid-template-columns:1fr;}}
+  .svc-row{display:flex;justify-content:space-between;gap:18px;padding:18px 0;border-bottom:1px dashed var(--line);}
+  .svc-row .name{font-family:"Fraunces",serif;font-size:17.5px;}
+  .svc-row .time{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:4px;font-family:"Manrope",sans-serif;font-weight:500;}
+  .svc-row .price{font-weight:700;color:var(--wine);white-space:nowrap;font-size:16px;padding-top:2px;}
+  .svc-note{margin-top:34px;font-size:13.5px;color:var(--ink-soft);}
+
+  /* -------- gallery -------- */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:14px;}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:16px;transition:transform .5s ease;}
+  .gallery-grid a{overflow:hidden;border-radius:16px;display:block;}
+  .gallery-grid a:hover img{transform:scale(1.06);}
+  .gallery-grid .tall{grid-row:span 2;}
+  @media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;}}
+
+  /* -------- team -------- */
+  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+  @media(max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr);}}
+  .team-card{text-align:center;}
+  .team-card .ph{width:100%;aspect-ratio:1/1.05;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);}
+  .team-card .ph img{width:100%;height:100%;object-fit:cover;}
+  .team-card h4{margin-top:18px;font-size:19px;}
+  .team-card span{display:block;margin-top:4px;font-size:13px;color:var(--wine);font-weight:600;}
+
+  /* -------- reviews -------- */
+  .reviews{background:var(--wine);color:#fff;}
+  .reviews .s-head .tag{color:var(--gold-light);}
+  .reviews .s-head h2, .reviews .s-head p{color:#fff;}
+  .reviews .s-head p{color:rgba(255,255,255,.78);}
+  .rev-summary{display:flex;align-items:center;gap:22px;margin-bottom:46px;flex-wrap:wrap;}
+  .rev-summary .score{font-family:"Fraunces",serif;font-size:56px;}
+  .rev-bars{flex:1;min-width:220px;}
+  .rev-bar-row{display:flex;align-items:center;gap:10px;font-size:12.5px;margin-bottom:6px;color:rgba(255,255,255,.8);}
+  .rev-bar-row .bar{flex:1;height:6px;background:rgba(255,255,255,.18);border-radius:10px;overflow:hidden;}
+  .rev-bar-row .fill{height:100%;background:var(--gold-light);}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media(max-width:900px){.rev-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.rev-grid{grid-template-columns:1fr;}}
+  .rev-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:26px;}
+  .rev-card .stars{color:var(--gold-light);font-size:14px;margin-bottom:14px;display:block;}
+  .rev-card p{font-size:15px;line-height:1.6;color:rgba(255,255,255,.92);}
+  .rev-card .who{margin-top:18px;display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,.65);}
+  .rev-card .who b{color:#fff;}
+
+  /* -------- location -------- */
+  .loc-grid{display:grid;grid-template-columns:minmax(300px,0.85fr) minmax(300px,1.15fr);gap:30px;align-items:stretch;}
+  @media(max-width:820px){.loc-grid{grid-template-columns:1fr;}}
+  .map-frame{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);min-height:420px;border:1px solid var(--line);}
+  .map-frame iframe{width:100%;height:100%;min-height:420px;border:0;display:block;}
+  .loc-info{background:#fff;border-radius:var(--radius-lg);padding:42px;box-shadow:var(--shadow);}
+  .loc-info h3{font-size:24px;margin-bottom:24px;}
+  .info-line{display:flex;gap:14px;margin-bottom:22px;align-items:flex-start;}
+  .info-line svg{width:20px;height:20px;color:var(--wine);flex-shrink:0;margin-top:2px;}
+  .info-line .lab{font-size:12.5px;color:var(--ink-soft);text-transform:none;margin-bottom:3px;}
+  .info-line .val{font-size:15.5px;font-weight:600;}
+  .hours-table{margin-top:6px;}
+  .hours-row{display:flex;justify-content:space-between;font-size:14.5px;padding:7px 0;border-bottom:1px solid var(--line);}
+  .hours-row.today{color:var(--wine);font-weight:700;}
+
+  /* -------- final cta -------- */
+  .final-cta{text-align:center;}
+  .final-cta .card{
+    background:linear-gradient(135deg,var(--blush),var(--cream-deep));
+    border-radius:36px;padding:70px 40px;
+  }
+  .final-cta h2{font-size:clamp(30px,4vw,46px);max-width:640px;margin:0 auto;}
+  .final-cta p{margin-top:16px;color:var(--ink-soft);font-size:16.5px;}
+  .final-cta .btn-row{margin-top:32px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+
+  /* -------- footer -------- */
+  footer{background:var(--ink);color:rgba(255,255,255,.7);padding:60px 0 30px;}
+  .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;margin-bottom:44px;}
+  @media(max-width:700px){.foot-grid{grid-template-columns:1fr;}}
+  .foot-brand{font-family:"Fraunces",serif;color:#fff;font-size:21px;margin-bottom:14px;}
+  footer p{font-size:14px;line-height:1.7;}
+  footer h5{color:#fff;font-size:13px;margin-bottom:16px;font-weight:700;}
+  footer ul li{margin-bottom:10px;font-size:14px;}
+  footer ul a:hover{color:#fff;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+  /* mobile nav drawer */
+  .mnav{position:fixed;inset:0;background:var(--cream);z-index:60;display:none;flex-direction:column;padding:26px 28px;}
+  .mnav.open{display:flex;}
+  .mnav .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;}
+  .mnav a{font-family:"Fraunces",serif;font-size:26px;padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink);}
+  .close-x{background:none;border:none;font-size:26px;cursor:pointer;color:var(--ink);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="dot"></span>Linda Nails &amp; Lashes</a>
+    <nav class="links">
+      <a href="#uslugi">Usługi</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#zespol">Zespół</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#kontakt">Lokalizacja</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener">Umów wizytę</a>
+      <button class="burger" id="burgerBtn" aria-label="Otwórz menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav">
+  <div class="top">
+    <span class="brand"><span class="dot"></span>Linda</span>
+    <button class="close-x" id="closeMnav" aria-label="Zamknij menu">✕</button>
+  </div>
+  <a href="#uslugi">Usługi</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#zespol">Zespół</a>
+  <a href="#opinie">Opinie</a>
+  <a href="#kontakt">Lokalizacja</a>
+  <a href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener" style="margin-top:24px;color:var(--wine);">Umów wizytę →</a>
+</div>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.9 6.6L21 10l-5 4.6L17.4 21 12 17.6 6.6 21 8 14.6 3 10l6.1-1.4z"/></svg>
+          Ursynów, Warszawa
+        </span>
+        <h1>Twoje paznokcie i rzęsy, <em>zrobione pięknie</em>.</h1>
+        <p class="hero-sub">Studio stylizacji paznokci i rzęs na Ursynowie. Manicure hybrydowy, przedłużanie paznokci, rzęsy 1:1 i objętościowe, laminacja brwi — w przyjaznej atmosferze i z dbałością o detale.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener">
+            Zarezerwuj online
+          </a>
+          <a class="btn btn-ghost" href="#uslugi">Zobacz cennik</a>
+        </div>
+        <div class="rating-pill">
+          <span class="stars">★★★★★</span>
+          <strong>4,8</strong>
+          <span class="small">na podstawie 831 opinii Booksy</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img class="img1" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/inspiration/9b4df0bef7264ea0b57a23e1008b7b-linda-nails-lashes-inspiration-ebf137f59fe946da9aa205ea3a802a-booksy.jpeg" alt="Stylizacja paznokci wykonana w salonie Linda Nails & Lashes">
+        <img class="img2" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/inspiration/ae18820e9af84cdb822c0a0a9710cc-linda-nails-lashes-inspiration-949bab2808c84433816bb5c19e2219-booksy.jpeg" alt="Przykładowa praca — manicure hybrydowy">
+        <div class="badge"><span class="b-dot"></span>Otwarte dziś do 19:00</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMENITIES MARQUEE -->
+  <div class="amenities">
+    <div class="track">
+      <span>Rezerwacja online 24/7</span>
+      <span>Parking przy salonie</span>
+      <span>Płatność kartą</span>
+      <span>Wi-Fi dla klientek</span>
+      <span>Program lojalnościowy</span>
+      <span>Miejsce przyjazne dzieciom</span>
+      <span>Dostępne dla niepełnosprawnych</span>
+      <span>Rezerwacja online 24/7</span>
+      <span>Parking przy salonie</span>
+      <span>Płatność kartą</span>
+      <span>Wi-Fi dla klientek</span>
+      <span>Program lojalnościowy</span>
+      <span>Miejsce przyjazne dzieciom</span>
+      <span>Dostępne dla niepełnosprawnych</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="wrap">
+      <div class="about-photo">
+        <img src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/inspiration/a2e3ddaedaed4d66b922b51e6148a0-linda-nails-lashes-inspiration-b38afde441a643be9cffe052a472c9-booksy.jpeg" alt="Wnętrze studia Linda Nails & Lashes">
+        <div class="about-stats">
+          <div class="num">831</div>
+          <div class="lab">zadowolonych opinii</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">O salonie</span>
+        <h2 style="font-size:clamp(28px,3.2vw,38px);margin-bottom:20px;">Miejsce, w którym dbamy o każdy detal</h2>
+        <p>Linda Nails &amp; Lashes to kameralne studio na Ursynowie, specjalizujące się w stylizacji paznokci oraz przedłużaniu i laminacji rzęs. Nasz zespół stylistek pracuje na sprawdzonych produktach i dba o higienę stanowiska przy każdej wizycie.</p>
+        <p>Od klasycznego manicure po efektowne zdobienia i objętościowe rzęsy — znajdziesz u nas usługę dopasowaną do Twoich potrzeb, a rezerwację umówisz online w kilka sekund.</p>
+        <div class="pill-row">
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Maseczki i rękawiczki jednorazowe</span>
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Dezynfekcja stanowiska po każdej wizycie</span>
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Żel do dezynfekcji dla klientek</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="uslugi">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="tag">Usługi i cennik</span>
+        <h2>Wybierz swoją stylizację</h2>
+        <p>Ceny orientacyjne — dokładny koszt zależy od długości i stanu paznokci lub gęstości rzęs. Pełną listę zobaczysz podczas rezerwacji online.</p>
+      </div>
+
+      <div class="tabs" id="tabs">
+        <button class="tab-btn active" data-tab="manicure">Manicure</button>
+        <button class="tab-btn" data-tab="pedicure">Pedicure</button>
+        <button class="tab-btn" data-tab="rzesy">Rzęsy</button>
+        <button class="tab-btn" data-tab="henna">Henna &amp; Laminacja</button>
+        <button class="tab-btn" data-tab="dodatki">Dodatki</button>
+      </div>
+
+      <div class="tab-panel active" id="manicure">
+        <div class="svc-grid">
+          <div class="svc-row"><div><span class="name">Manicure hybrydowy + baza overlay</span><span class="time">50 min · wzmacnia słabe paznokcie</span></div><span class="price">99 zł</span></div>
+          <div class="svc-row"><div><span class="name">Manicure klasyczny + odżywka</span><span class="time">15 min</span></div><span class="price">50 zł</span></div>
+          <div class="svc-row"><div><span class="name">Manicure z malowaniem, kolor klasyczny</span><span class="time">45 min</span></div><span class="price">60 zł</span></div>
+          <div class="svc-row"><div><span class="name">Uzupełnienie akrylu</span><span class="time">od 1 godz.</span></div><span class="price">od 110 zł</span></div>
+          <div class="svc-row"><div><span class="name">Uzupełnienie żelu</span><span class="time">od 1 godz. 5 min</span></div><span class="price">od 110 zł</span></div>
+          <div class="svc-row"><div><span class="name">Przedłużanie paznokci — akryl (tipsy)</span><span class="time">od 1 godz. 10 min</span></div><span class="price">od 120 zł</span></div>
+          <div class="svc-row"><div><span class="name">Przedłużanie paznokci — żel (tipsy)</span><span class="time">1 godz. 10 min</span></div><span class="price">120 zł</span></div>
+          <div class="svc-row"><div><span class="name">Manicure hybrydowy + pedicure hybrydowy</span><span class="time">2 godz. · pakiet</span></div><span class="price">200 zł</span></div>
+        </div>
+        <p class="svc-note">Zdjęcie stylizacji (hybryda, akryl lub żel) już od 30 zł.</p>
+      </div>
+
+      <div class="tab-panel" id="pedicure">
+        <div class="svc-grid">
+          <div class="svc-row"><div><span class="name">Pedicure z malowaniem hybrydowym</span><span class="time">50 min</span></div><span class="price">110 zł</span></div>
+          <div class="svc-row"><div><span class="name">Pedicure klasyczny z odżywką</span><span class="time">30 min</span></div><span class="price">80 zł</span></div>
+          <div class="svc-row"><div><span class="name">Pedicure hybrydowy + Spa</span><span class="time">od 1 godz. · peeling i masaż</span></div><span class="price">od 130 zł</span></div>
+          <div class="svc-row"><div><span class="name">Pedicure hybrydowy bez kąpieli wodnej</span><span class="time">40 min</span></div><span class="price">80 zł</span></div>
+          <div class="svc-row"><div><span class="name">Pedicure męskie</span><span class="time">45 min</span></div><span class="price">100 zł</span></div>
+          <div class="svc-row"><div><span class="name">Pedicure akrylowy z malowaniem hybrydowym</span><span class="time">1 godz. 10 min</span></div><span class="price">139 zł</span></div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="rzesy">
+        <div class="svc-grid">
+          <div class="svc-row"><div><span class="name">Przedłużanie rzęs metodą 1:1</span><span class="time">1 godz. 15 min</span></div><span class="price">105 zł</span></div>
+          <div class="svc-row"><div><span class="name">Przedłużanie rzęs 2/3:1</span><span class="time">od 1 godz. 20 min</span></div><span class="price">od 130 zł</span></div>
+          <div class="svc-row"><div><span class="name">Przedłużanie rzęs 4/5D</span><span class="time">od 1 godz. 15 min</span></div><span class="price">od 130 zł</span></div>
+          <div class="svc-row"><div><span class="name">Efekt Wet Look</span><span class="time">od 1 godz. 20 min</span></div><span class="price">od 120 zł</span></div>
+          <div class="svc-row"><div><span class="name">Efekt „Kim K"</span><span class="time">1 godz. 45 min</span></div><span class="price">140 zł</span></div>
+          <div class="svc-row"><div><span class="name">Uzupełnienie rzęs 1:1</span><span class="time">1 godz. 15 min</span></div><span class="price">99 zł</span></div>
+          <div class="svc-row"><div><span class="name">Uzupełnienie 2D/3D</span><span class="time">1 godz. 20 min</span></div><span class="price">120 zł</span></div>
+          <div class="svc-row"><div><span class="name">Zdejmowanie rzęs</span><span class="time">15 min</span></div><span class="price">30 zł</span></div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="henna">
+        <div class="svc-grid">
+          <div class="svc-row"><div><span class="name">Henna brwi</span><span class="time">15 min</span></div><span class="price">25 zł</span></div>
+          <div class="svc-row"><div><span class="name">Henna rzęs</span><span class="time">15 min</span></div><span class="price">25 zł</span></div>
+          <div class="svc-row"><div><span class="name">Henna brwi + regulacja</span><span class="time">15 min</span></div><span class="price">35 zł</span></div>
+          <div class="svc-row"><div><span class="name">Henna brwi i rzęs + regulacja</span><span class="time">35 min</span></div><span class="price">65 zł</span></div>
+          <div class="svc-row"><div><span class="name">Laminacja brwi</span><span class="time">55 min</span></div><span class="price">90 zł</span></div>
+          <div class="svc-row"><div><span class="name">Laminacja rzęs</span><span class="time">1 godz. 10 min</span></div><span class="price">90 zł</span></div>
+          <div class="svc-row"><div><span class="name">Laminacja brwi + henna</span><span class="time">1 godz.</span></div><span class="price">110 zł</span></div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="dodatki">
+        <div class="svc-grid">
+          <div class="svc-row"><div><span class="name">French / Ombre / Chrome</span><span class="time">10 min</span></div><span class="price">20 zł</span></div>
+          <div class="svc-row"><div><span class="name">Cateye</span><span class="time">5 min</span></div><span class="price">15 zł</span></div>
+          <div class="svc-row"><div><span class="name">Zdobienie — 1 paznokieć</span><span class="time">od 5 min</span></div><span class="price">od 5 zł</span></div>
+          <div class="svc-row"><div><span class="name">Naprawa 1 paznokcia</span><span class="time">10 min</span></div><span class="price">10 zł</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galeria">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="tag">Portfolio</span>
+        <h2>Nasze prace</h2>
+        <p>Wybór stylizacji wykonanych w naszym studiu — zobacz więcej w profilu na Booksy lub przynieś inspirację na wizytę.</p>
+      </div>
+      <div class="gallery-grid">
+        <a href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener" class="tall"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/service_photos/e10b5c10a51c42c588f2bed3be4a974d.jpeg" alt="Manicure hybrydowy"></a>
+        <a href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/service_photos/f5117ad5ff694017889278b9257ec072.jpeg" alt="Uzupełnienie akrylu"></a>
+        <a href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/service_photos/716fa82367944e05afec30b3d9df3937.jpeg" alt="Pedicure z malowaniem hybrydowym"></a>
+        <a href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener" class="tall"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/service_photos/a7b857cdbd3c4e069968561ce8b12301.jpeg" alt="Przedłużanie rzęs 1:1"></a>
+        <a href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/service_photos/4e57378a53a94e54bde840bd58063e51.jpeg" alt="Zdobienie French Ombre Chrome"></a>
+        <a href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/service_photos/2775abe0103047a282eb2b0352e4f2d8.jpeg" alt="Przedłużanie paznokci na tipsach"></a>
+        <a href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/service_photos/ec94b69b8cf5458ea89431f812208db8.jpeg" alt="Rzęsy efekt Kim K"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="zespol" style="background:var(--cream-deep);">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="tag">Nasz zespół</span>
+        <h2>Stylistki i stylista, którym możesz zaufać</h2>
+        <p>Przy rezerwacji online możesz wybrać ulubioną osobę do wykonania zabiegu.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="ph"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/resource_photos/7ff7bf61544b4345b605b5be4c0ce11a.jpeg" alt="Tony — stylista paznokci"></div>
+          <h4>Tony</h4><span>Manicure &amp; stylizacje</span>
+        </div>
+        <div class="team-card">
+          <div class="ph"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/resource_photos/fc7061925e94478eabbe4b8c71e7fa66.jpeg" alt="Ami — stylistka paznokci"></div>
+          <h4>Ami</h4><span>Manicure &amp; pedicure</span>
+        </div>
+        <div class="team-card">
+          <div class="ph"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/resource_photos/fb6ed51dcd9d459aacf5701b53152c51.jpeg" alt="Kevin — stylista paznokci"></div>
+          <h4>Kevin</h4><span>Manicure &amp; zdobienia</span>
+        </div>
+        <div class="team-card">
+          <div class="ph"><img loading="lazy" src="https://d375139ucebi94.cloudfront.net/region2/pl/166320/resource_photos/e4a1289e746842d38d682a604b108397.jpeg" alt="Victoria — stylistka rzęs"></div>
+          <h4>Victoria</h4><span>Rzęsy &amp; laminacja</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="opinie">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="tag">Opinie klientek</span>
+        <h2>Co mówią o nas klientki</h2>
+        <p>Prawdziwe opinie zweryfikowanych klientek z profilu Booksy.</p>
+      </div>
+
+      <div class="rev-summary">
+        <div class="score">4,8</div>
+        <div>
+          <span class="stars">★★★★★</span>
+          <div style="font-size:13.5px;color:rgba(255,255,255,.75);margin-top:4px;">831 opinii ogółem</div>
+        </div>
+        <div class="rev-bars">
+          <div class="rev-bar-row"><span style="width:14px;">5</span><div class="bar"><div class="fill" style="width:91%;"></div></div><span>758</span></div>
+          <div class="rev-bar-row"><span style="width:14px;">4</span><div class="bar"><div class="fill" style="width:2%;"></div></div><span>18</span></div>
+          <div class="rev-bar-row"><span style="width:14px;">3</span><div class="bar"><div class="fill" style="width:1.5%;"></div></div><span>13</span></div>
+          <div class="rev-bar-row"><span style="width:14px;">2</span><div class="bar"><div class="fill" style="width:1.5%;"></div></div><span>13</span></div>
+          <div class="rev-bar-row"><span style="width:14px;">1</span><div class="bar"><div class="fill" style="width:3.5%;"></div></div><span>29</span></div>
+        </div>
+      </div>
+
+      <div class="rev-grid">
+        <div class="rev-card">
+          <span class="stars">★★★★★</span>
+          <p>„Bardzo szybko, bardzo pięknie, wszystko mi się bardzo podobało. Polecam 😊"</p>
+          <div class="who"><b>Anastasiya</b><span>Manicure hybrydowy + baza overlay</span></div>
+        </div>
+        <div class="rev-card">
+          <span class="stars">★★★★★</span>
+          <p>„Bardzo miła obsługa i pięknie wykonane paznokcie. Jestem bardzo zadowolona, na pewno wrócę!"</p>
+          <div class="who"><b>Alicja</b><span>Manicure klasyczny + odżywka</span></div>
+        </div>
+        <div class="rev-card">
+          <span class="stars">★★★★★</span>
+          <p>„Świetna atmosfera, wszystko zrobione dokładnie i starannie. Paznokcie wyglądają pięknie!"</p>
+          <div class="who"><b>Agnieszka</b><span>Manicure z malowaniem kolor klasyczny</span></div>
+        </div>
+        <div class="rev-card">
+          <span class="stars">★★★★★</span>
+          <p>„Jak zawsze piękne rzęsy, dziękuję Victoria."</p>
+          <div class="who"><b>Monika</b><span>Uzupełnienie 4D/5D</span></div>
+        </div>
+        <div class="rev-card">
+          <span class="stars">★★★★★</span>
+          <p>„Już po trzech dniach po wizycie wyglądało tak samo pięknie jak pierwszego dnia."</p>
+          <div class="who"><b>Sara</b><span>Manicure hybrydowy + baza overlay</span></div>
+        </div>
+        <div class="rev-card">
+          <span class="stars">★★★★★</span>
+          <p>„Polecam — profesjonalna obsługa i dokładność w każdym detalu."</p>
+          <div class="who"><b>Agnieszka</b><span>Manicure hybrydowy + baza overlay</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="loc" id="kontakt">
+    <div class="wrap">
+      <div class="s-head" style="margin-bottom:44px;">
+        <span class="tag">Lokalizacja i kontakt</span>
+        <h2>Znajdź nas na Ursynowie</h2>
+      </div>
+      <div class="loc-grid">
+        <div class="loc-info">
+          <h3>Dane salonu</h3>
+          <div class="info-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div><div class="lab">Adres</div><div class="val">ul. Franciszka Marii Lanciego 10E<br>02-792 Warszawa, Ursynów</div></div>
+          </div>
+          <div class="info-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+            <div><div class="lab">Rezerwacja</div><div class="val">Online 24/7 przez Booksy</div></div>
+          </div>
+          <div class="info-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <div style="width:100%;">
+              <div class="lab" style="margin-bottom:10px;">Godziny otwarcia</div>
+              <div class="hours-table">
+                <div class="hours-row today"><span>Dziś</span><span>09:30 – 19:00</span></div>
+                <div class="hours-row"><span>Poniedziałek – Piątek</span><span>zwykle 09:30 – 19:00</span></div>
+                <div class="hours-row"><span>Sobota</span><span>godziny skrócone</span></div>
+                <div class="hours-row"><span>Niedziela</span><span>sprawdź dostępność</span></div>
+              </div>
+              <p style="font-size:12.5px;color:var(--ink-soft);margin-top:10px;">Pełny, aktualny grafik i wolne terminy zobaczysz przy rezerwacji na Booksy.</p>
+            </div>
+          </div>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-top:10px;" href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener">Umów wizytę online</a>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:10px;" href="https://www.google.com/maps/search/?api=1&query=ul.+Franciszka+Marii+Lanciego+10E,+02-792+Warszawa" target="_blank" rel="noopener">Wyznacz trasę (Google Maps)</a>
+        </div>
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=ul.+Franciszka+Marii+Lanciego+10E,+02-792+Warszawa&hl=pl&z=15&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa — Linda Nails & Lashes, ul. Franciszka Marii Lanciego 10E, Warszawa">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="wrap">
+      <div class="card">
+        <h2>Zarezerwuj swój termin już dziś</h2>
+        <p>Rezerwacja online zajmuje mniej niż minutę — wybierz usługę, stylistkę i dogodną godzinę.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener">Zarezerwuj przez Booksy</a>
+          <a class="btn btn-ghost" href="#uslugi">Zobacz cennik</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Linda Nails &amp; Lashes</div>
+        <p>Studio stylizacji paznokci i rzęs na Ursynowie w Warszawie. Manicure, pedicure, przedłużanie rzęs, henna i laminacja brwi.</p>
+      </div>
+      <div>
+        <h5>Nawigacja</h5>
+        <ul>
+          <li><a href="#uslugi">Usługi i cennik</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#zespol">Zespół</a></li>
+          <li><a href="#opinie">Opinie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li>ul. Franciszka Marii Lanciego 10E</li>
+          <li>02-792 Warszawa, Ursynów</li>
+          <li><a href="https://lindanailsandlashes.booksy.com/a/" target="_blank" rel="noopener">Rezerwacja online (Booksy)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Linda Nails &amp; Lashes. Wszelkie prawa zastrzeżone.</span>
+      <span>Zdjęcia i opinie pochodzą z profilu salonu na Booksy.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  const burger = document.getElementById('burgerBtn');
+  const mnav = document.getElementById('mnav');
+  const closeMnav = document.getElementById('closeMnav');
+  burger.addEventListener('click', ()=> mnav.classList.add('open'));
+  closeMnav.addEventListener('click', ()=> mnav.classList.remove('open'));
+  mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>mnav.classList.remove('open')));
+
+  // service tabs
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  tabBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      tabBtns.forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
